@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.kivimaki.ligtaspinas">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyADn7WbToCnzD7Y7kF8h62b11NYbZbJGiU" />
+
+        <activity
+            android:name=".SplashScreen"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".BGService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <activity android:name=".Login" />
+        <activity android:name=".MyBrgy" />
+        <activity android:name=".MyCity" />
+        <activity android:name=".Flood" />
+        <activity android:name=".EvacuationArea" />
+        <activity android:name=".IncidentReport" />
+        <activity android:name=".EmergencyContact" />
+        <activity android:name=".NewsAndAnnouncement" />
+        <activity android:name=".FloodClicked" />
+        <activity android:name=".Dashboard" />
+        <activity android:name=".Announcements" />
+        <activity android:name=".ViewImages" />
+        <activity android:name=".Map" />
+        <activity android:name=".ForgotPassword" />
+        <activity android:name=".Register"></activity>
+    </application>
+
+</manifest>
